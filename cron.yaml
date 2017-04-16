@@ -1,0 +1,24 @@
+cron:
+- description: check if any report
+  url: /emailNotice
+  schedule: every day 23:00
+  timezone: Asia/Taipei
+  
+
+- description: check if any account fall due
+  url: /sendExpirationEmail
+  schedule: every day 23:59
+  timezone: Asia/Taipei
+  
+  
+- description: check if member expiration
+  url: /memberExpirationDate
+  schedule: every day 23:59
+  timezone: Asia/Taipei
+  
+  
+- description: check if any member relieveGag
+  url: /relieveGag
+#  schedule: every 5 minutes from 00:04 to 23:59
+  schedule: every day 00:00
+  timezone: Asia/Taipei
